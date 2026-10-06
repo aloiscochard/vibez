@@ -1,0 +1,35 @@
+{
+  "agent": {
+    "build": {
+      "disable": true,
+      "description": ""
+    },
+    "plan": {
+      "disable": true,
+      "description": ""
+    },
+    "analysis": {
+      "mode": "primary",
+      "prompt": "{file:./vibez/agents/analysis.md}",
+    },
+    "planner": {
+      "mode": "primary",
+      "prompt": "{file:./vibez/agents/planner.md}",
+    },
+    "coordinator": {
+      "mode": "primary",
+      "prompt": "{file:./vibez/agents/coordinator.md}",
+    },
+    "executor": {
+      "mode": "subagent",
+      "prompt": "{file:./vibez/agents/executor.md}",
+    },
+    "reviewer": {
+      "mode": "subagent",
+      "prompt": "{file:./vibez/agents/reviewer.md}",
+    },
+  },
+  "instructions": ["vibez/rules/*.md", "CONTRIBUTING.md"],
+  "model": "github-copilot/gpt-5.4",
+  "$schema": "https://opencode.ai/config.json"
+}
