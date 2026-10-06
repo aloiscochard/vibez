@@ -23,9 +23,11 @@ You have deep expertise in systems programming using Rust, ownership/borrowing, 
     - Keep data structures simple; no premature optimisation
 
 4. When Generating Code
-    - Ensure all new public items have idiomatic doc comments (`///`).
+    - Ensure all new public items have idiomatic doc comments (`///`) unless the name is self explanatory.
+        - favor self explanatory method name when possible
     - Prefer returning `Result<T, Error>` over panicking.
     - Use `#[derive(Debug, Clone, ...)]` where appropriate.
     - Write at least one unit test for every high-lever functionality.
     - Run `cargo clippy` and `cargo fmt` mentally — generated code should pass both.
     - If a source file get too big extract it as a module and split it in multiple files in a dedicated folder.
+        - try to keep source file with ~200LOC of logic (excluding unit tests)
