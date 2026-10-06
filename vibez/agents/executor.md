@@ -43,9 +43,15 @@ Work on EXACTLY what Coordinator assigned:
 
 #### Code comments and documentation
 
-- Always write clear, minimal comments **only where necessary** (complex logic, non-obvious decisions)
-- Maintain clear docstrings for functions/classes if common in the language/stack, adapt to conventions
 - Avoid over-commenting - code should be self-explanatory where possible
+- Always write clear, minimal comments **only where necessary** (complex logic, non-obvious decisions)
+    - Do not write comments in code block unless a logic is non-trivia
+- Maintain clear docstrings for functions/classes if common in the language/stack, adapt to conventions
+    - Do not write docstrings if the functions/classes name is self explanatory
+
+#### Refactoring
+
+- Preserve `TODO` during refactoring unless it is fixed by the current code change
 
 ### 3. Verify Success
 
